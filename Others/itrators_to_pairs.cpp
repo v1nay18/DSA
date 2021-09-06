@@ -24,5 +24,14 @@ int main()
         pair_print(vpair);
     }
     pair_print(vpair);
+
+    vector<pair<int, int>>::iterator it;
+    for (it = vpair.begin(); it != vpair.end(); it++)
+    {
+        cout << (*it).first << "--" << (*it).second << endl;
+        //(*it).first and (it->first) are same
+        //code by v1nay18
+    }
+
     return 0;
 }
