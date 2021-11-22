@@ -17,11 +17,12 @@ int main()
     cin >> s;
     cout << s.length() << endl;
 
-    for (int i = 0; i < s.length(); i++)
+    for (int i = 0; s[i]; i++)
     {
-        //m11[s]++;
-        // m11.insert({s[i], m11[s[i]]++});
-        m11[s]++;
+        if (m11.find(s[i]) == m11.end())
+        {
+            m11.insert(make_pair(s[i], 1));
+        }
     }
     printmaps(m11);
     return 0;
